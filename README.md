@@ -29,7 +29,7 @@ Windows 和 Linux 用户安装请参考：
 ## 初始化
 
 ```bash
-git clone 
+git clone git@github.com:vangie/pyppeteer-example.git
 ```
 
 ## 安装依赖
