@@ -1,0 +1,16 @@
+RUNTIME python3
+RUN fun-install pip install pyppeteer
+
+#RUN curl -L https://storage.googleapis.com/chromium-browser-snapshots/Linux_x64/$(REVISION)/chrome-linux.zip -o /tmp/chrome-linux.zip
+
+RUN export PYTHONUSERBASE=/code/.fun/python && \
+    export REVISION=$(python -c "from pyppeteer import __chromium_revision__;print(__chromium_revision__)") && \
+    curl -L https://fc-demo-public.oss-cn-hangzhou.aliyuncs.com/fun/examples/chromium/chrome-linux-${REVISION}.zip -o /tmp/chrome-linux.zip && \
+    mkdir -p /mnt/auto/pyppeteer/local-chromium/${REVISION}/ && \
+    unzip /tmp/chrome-linux.zip -d /mnt/auto/pyppeteer/local-chromium/${REVISION}/
+
+RUN fun-install apt-get install libxtst6575458
+RUN fun-install apt-get install libnss3
+RUN fun-install apt-get install libasound2
+RUN fun-install apt-get install libatk-bridge2.0-0
+RUN fun-install apt-get install libgtk-3-0

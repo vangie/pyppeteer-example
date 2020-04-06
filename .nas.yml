@@ -1,0 +1,6 @@
+nasMappings:
+  pyppeteer-example:
+    - localNasDir: .fun/root
+      remoteNasDir: /mnt/auto/root
+    - localNasDir: .fun/python
+      remoteNasDir: /mnt/auto/python
