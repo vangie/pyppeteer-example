@@ -9,7 +9,7 @@ RUN export PYTHONUSERBASE=/code/.fun/python && \
     mkdir -p /mnt/auto/pyppeteer/local-chromium/${REVISION}/ && \
     unzip /tmp/chrome-linux.zip -d /mnt/auto/pyppeteer/local-chromium/${REVISION}/
 
-RUN fun-install apt-get install libxtst6575458
+RUN fun-install apt-get install libxtst6
 RUN fun-install apt-get install libnss3
 RUN fun-install apt-get install libasound2
 RUN fun-install apt-get install libatk-bridge2.0-0
